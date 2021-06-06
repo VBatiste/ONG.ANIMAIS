@@ -14,6 +14,22 @@ function acharAnimalChip (){
          console.log("animal não encontrado")
     }
 }
+function acharTutorCpf (){
+    var buscarTutor = prompt("insira cpf do tutor:")
+    var tutorFound = false
+    for (var i = 0 ; i < listaDeTutores.length; i++)
+    if ( buscarTutor === registroTutores[i].cpf) {
+        console.log("tutor encontrado")
+        console.log("nome : " + registroTutores[i].nome )
+        console.log("idade : " + registroTutores[i].idade )
+        console.log("CPF : " + registroTutores[i].cpf )
+      tutorFound = true
+    }
+    if ( ! buscarTutor === registroTutores[i].cpf -1) {
+         console.log("tutor não encontrado")
+    }
+}
+
 
 
 animal = {
@@ -67,12 +83,16 @@ var operação = Number(prompt("insira a operação"))
             animal.idade= prompt("insira idade")
             listaDeAnimais.push(animal);
             console.log("animal cadastrado com sucesso")
+            console.log("o cadastro do Animal "+ animal.nome +", chip: " + animal.Chip +" foi completo")
             break;
         
         case 3://lista de animais]
-
+            console.log("existem "+ listaDeAnimais.length+" animais cadastrados")
+            console.log(listaDeAnimais)
             break;
         case 4://lista de tutores
+            console.log("Existem "+ listaDeTutores.length +" tutores registrados")
+            console.log(listaDeTutores)
             break;
         case 5://animais a adoção
             break;
@@ -82,6 +102,7 @@ var operação = Number(prompt("insira a operação"))
         acharAnimalChip()
             break;
         case 8://procurar tutores
+        acharTutorCpf()
             break;
         default:
             console.log("operação inexitente: tente novamente")

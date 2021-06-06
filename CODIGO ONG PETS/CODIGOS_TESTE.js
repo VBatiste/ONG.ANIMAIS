@@ -68,4 +68,19 @@ function acharAnimalChip (){
          console.log("animal não encontrado")
     }
 }
+function acharTutorCpf (){
+    var buscarTutor = prompt("insira cpf do tutor:")
+    var tutorFound = false
+    for (var i = 0 ; i < listaDeTutores.length; i++)
+    if ( buscarTutor === registroTutores[i].cpf) {
+        console.log("tutor encontrado")
+        console.log("nome : " + registroTutores[i].nome )
+        console.log("idade : " + registroTutores[i].idade )
+        console.log("CPF : " + registroTutores[i].cpf )
+      tutorFound = true
+    }
+    if ( ! buscarTutor === registroTutores[i].cpf -1) {
+         console.log("tutor não encontrado")
+    }
+}
 
