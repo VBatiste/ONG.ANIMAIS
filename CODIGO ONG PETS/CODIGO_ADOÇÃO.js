@@ -1,3 +1,21 @@
+function acharAnimalChip (){
+    var buscarAnimal = prompt("insira chip do animal a procurar:")
+    var animalFound = false
+    for (var i = 0 ; i < listaDeAnimais.length; i++)
+    if ( buscarAnimal === animal[i].Chip) {
+        console.log("animal encontrado")
+        console.log("nome: " + animal[i].nome )
+        console.log("raça: " + animal[i].Raça )
+        console.log("idade: " + animal[i].idade )
+        console.log("chip: " + animal[i].Chip )
+      animalFound = true
+    }
+    if ( ! buscarAnimal === animal[i].Chip -1) {
+         console.log("animal não encontrado")
+    }
+}
+
+
 animal = {
     nome : null
     ,especie : null
@@ -51,7 +69,8 @@ var operação = Number(prompt("insira a operação"))
             console.log("animal cadastrado com sucesso")
             break;
         
-        case 3://lista de animais
+        case 3://lista de animais]
+
             break;
         case 4://lista de tutores
             break;
@@ -60,6 +79,7 @@ var operação = Number(prompt("insira a operação"))
         case 6://editar tutores
             break;
         case 7://procurar animais
+        acharAnimalChip()
             break;
         case 8://procurar tutores
             break;

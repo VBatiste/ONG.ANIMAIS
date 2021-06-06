@@ -1,4 +1,4 @@
-var addAnimal = listaDeAnimais.push(Animal)
+/*var addAnimal = listaDeAnimais.push(Animal)
 listaDeAnimais = [];
 var animal = {
     nome = null
@@ -15,7 +15,7 @@ animal.Genero= prompt("ensira genero do animal")
 animal.peso= prompt("ensira peso do animal")
 animal.Estado= prompt("ensira estado do animal")
 animal.Chip= prompt("ensira numeração de chip do animal")
-//if//animal ja estiver seu chip cadastrado
+//if animal ja estiver seu chip cadastrado
     //(console.log("animal invalido: chip ja registrado"))
 //else{
     listaDeAnimais.push(Animal)
@@ -50,4 +50,22 @@ animal.peso= prompt(Peso)
 animal.Estado= prompt(Estado)
 animal.Chip= prompt(Chip)
 
-listaDeAnimais.push(animal);
+listaDeAnimais.push(animal);\ */
+
+function acharAnimalChip (){
+    var buscarAnimal = prompt("insira chip do animal a procurar:")
+    var animalFound = false
+    for (var i = 0 ; i < listaDeAnimais.length; i++)
+    if ( buscarAnimal === animal[i].Chip) {
+        console.log("animal encontrado")
+        console.log("nome: " + animal[i].nome )
+        console.log("raça: " + animal[i].Raça )
+        console.log("idade: " + animal[i].idade )
+        console.log("chip: " + animal[i].Chip )
+      animalFound = true
+    }
+    if ( ! buscarAnimal === animal[i].Chip -1) {
+         console.log("animal não encontrado")
+    }
+}
+
