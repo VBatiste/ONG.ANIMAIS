@@ -29,9 +29,6 @@ function acharTutorCpf (){
          console.log("tutor não encontrado")
     }
 }
-
-
-
 animal = {
     nome : null
     ,especie : null
@@ -43,11 +40,11 @@ animal = {
     ,idade: 0
 } 
  registroTutores ={
-    nome =null
-    ,sexo =null
-    ,idade=0
-    ,endereço=null
-    ,cpf =null
+    nome :null
+    ,sexo :null
+    ,idade:0
+    ,endereço:null
+    ,cpf :null
 }
 var listaDeTutores = []
 var listaDeAnimais = []
@@ -75,7 +72,7 @@ var operação = Number(prompt("insira a operação"))
             break;
         case 2://cadastro de animais
             animal.nome = prompt("insira nome")
-            animal.Raca= prompt("insira idade")
+            animal.Raca= prompt("insira raça")
             animal.Genero= prompt("insira genero")
             animal.peso= prompt("insira peso")
             animal.Estado= prompt("insira estado")
@@ -84,10 +81,11 @@ var operação = Number(prompt("insira a operação"))
             listaDeAnimais.push(animal);
             console.log("animal cadastrado com sucesso")
             console.log("o cadastro do Animal "+ animal.nome +", chip: " + animal.Chip +" foi completo")
+            console.log("existem "+ listaDeAnimais.length+" animais cadastrados")
             break;
         
         case 3://lista de animais]
-            console.log("existem "+ listaDeAnimais.length+" animais cadastrados")
+            console.log("existem "+ listaDeAnimais.length +" animais cadastrados")
             console.log(listaDeAnimais)
             break;
         case 4://lista de tutores
