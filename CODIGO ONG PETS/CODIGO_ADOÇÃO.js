@@ -29,6 +29,15 @@ function acharTutorCpf (){
          console.log("tutor não encontrado")
     }
 }
+function retorno(){
+    var endmenu = Number(prompt("1-retornar para menu, 2- encerrar"))
+    if(endmenu === 1){
+    operação= Number(prompt("insira a operação"))
+    }
+    if(endmenu === 2){
+        console.log("Ate mais passar bem")
+    }
+}
 animal = {
     nome : null
     ,especie : null
@@ -48,6 +57,7 @@ animal = {
 }
 var listaDeTutores = []
 var listaDeAnimais = []
+    
 
 console.log("////////// SISTEMA DE ADOÇÃO ////////////")
 console.log("Porfavor insira a operação q deseja fazer")
@@ -69,7 +79,6 @@ var operação = Number(prompt("insira a operação"))
         registroTutores.cpf = prompt("insira cpf")
         listaDeTutores.push(registroTutores)
         console.log("tutor cadastrado com sucesso")
-            break;
         case 2://cadastro de animais
             animal.nome = prompt("insira nome")
             animal.Raca= prompt("insira raça")
@@ -82,27 +91,36 @@ var operação = Number(prompt("insira a operação"))
             console.log("animal cadastrado com sucesso")
             console.log("o cadastro do Animal "+ animal.nome +", chip: " + animal.Chip +" foi completo")
             console.log("existem "+ listaDeAnimais.length+" animais cadastrados")
-            break;
-        
+           retorno()
         case 3://lista de animais]
             console.log("existem "+ listaDeAnimais.length +" animais cadastrados")
             console.log(listaDeAnimais)
+            retorno()
             break;
         case 4://lista de tutores
             console.log("Existem "+ listaDeTutores.length +" tutores registrados")
             console.log(listaDeTutores)
+            retorno()
             break;
         case 5://animais a adoção
+        for (var i = 0 ; i < listaDeAnimais.length; i++)
+            if(animal(i).Estado === vivo){
+             console.log(listaDeAnimais)
+            }
+            retorno()
             break;
         case 6://editar tutores
             break;
         case 7://procurar animais
         acharAnimalChip()
+        retorno()
             break;
         case 8://procurar tutores
         acharTutorCpf()
+        retorno()
             break;
         default:
             console.log("operação inexitente: tente novamente")
+            retorno()
             break;
 }
