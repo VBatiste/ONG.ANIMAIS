@@ -84,3 +84,12 @@ function acharTutorCpf (){
     }
 }
 
+ var lista = []
+ var objeto = {
+     nome : null,
+     idade : null
+ }
+ objeto.nome = prompt("nome")
+ objeto.idade = prompt("idade")
+ lista.push(objeto)
+ console.log("objeto ta na lista supostamente")
