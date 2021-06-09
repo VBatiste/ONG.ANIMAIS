@@ -123,7 +123,8 @@ animal={
     peso : 0,
     Estado :null,
     Chip : null,
-    idade: 0} 
+    idade: 0
+} 
 
 Tutor={
     nome :null,
