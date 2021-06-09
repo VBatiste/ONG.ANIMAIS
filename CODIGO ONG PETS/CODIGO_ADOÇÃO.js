@@ -114,7 +114,6 @@ function listarTutores(){
     console.log("Estado: " +tutor.endereco)
     console.log("Chip: "+tutor.cpf)
    }
-
 animal={
     nome : null,
     especie : null,
@@ -125,7 +124,6 @@ animal={
     Chip : null,
     idade: 0
 } 
-
 Tutor={
     nome :null,
     sexo :null,
@@ -133,7 +131,6 @@ Tutor={
     endereco:null,
     cpf :null
 }
-
 var listaDeTutores = []
 
 var listaDeAnimais = [
@@ -149,14 +146,12 @@ var listaDeAnimais = [
     } 
         
 ]
-
 function addanimal (){
     listaDeAnimais.push(animal)
 }
 function addtutor (){
     listaDeTutores.push(Tutor)
 }   
-
 console.log("////////// SISTEMA DE ADOÇÃO ////////////")
 console.log("Porfavor insira a operação q deseja fazer")
 console.log("1.cadastro de tutores")
