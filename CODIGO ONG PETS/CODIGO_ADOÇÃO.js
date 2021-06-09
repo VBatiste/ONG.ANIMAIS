@@ -209,13 +209,17 @@ var operação = Number(prompt("insira a operação"))
             retorno();
             break;
         case 6://editar tutores
-        var buscarAnimal = prompt("insira chip do animal a procurar:");
+        var buscarAnimal2 = prompt("insira chip do animal a procurar:");
         var animalFound = false
         for (var i = 0 ; i < listaDeTutores.length; i++)
-            if(eced){
+            if(buscarAnimal2===listaDeTutores[i].length){
          listaDeTutores.slice(i,1)
+         console.log("animal deletado")
          animalFound = true
         }
+        if(! buscarAnimal === animal[i].Chip -1)
+        console.log("//animal nao encontrado//")
+        retorno();
             break;
         case 7://procurar animais
         acharAnimalChip ()
