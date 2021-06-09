@@ -93,3 +93,11 @@ function acharTutorCpf (){
  objeto.idade = prompt("idade")
  lista.push(objeto)
  console.log("objeto ta na lista supostamente")
+function listarTutores(){
+ for (var i = 0 ; i < listaDeTutores.length; i++);
+ console.log("///////////////////////////////////")
+ console.log("Nome: " +tutor.nome)
+ console.log("Idade: "+tutor.idade )
+ console.log("Estado: " +tutor.endereco)
+ console.log("Chip: "+tutor.cpf)
+}

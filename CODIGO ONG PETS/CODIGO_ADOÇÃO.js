@@ -33,21 +33,121 @@ function retorno(){
     var endmenu = Number(prompt("1-retornar para menu, 2- encerrar"))
     if(endmenu === 1){
         operação= Number(prompt("insira a operação"))
-            switch (operação){}
+        switch (operação){
+            case 1://cadastro de tutores
+            registroTutores.nome = prompt("insira nome")
+            registroTutores.sexo = prompt("insira sexo")
+            registroTutores.idade = prompt("insira idade")
+            registroTutores.endereço = prompt("insira endereço")
+            registroTutores.cpf = prompt("insira cpf")
+            addtutor()
+            console.log("tutor cadastrado com sucesso")
+            break;
+            case 2://cadastro de animais
+                animal.nome = prompt("insira nome")
+                animal.Raca= prompt("insira raça")
+                animal.Genero= prompt("insira genero")
+                animal.peso= prompt("insira peso")
+                animal.Estado= prompt("insira estado")
+                animal.Chip= prompt("insira chip")
+                animal.idade= prompt("insira idade")
+                 addanimal();
+                console.log("animal cadastrado com sucesso")
+                console.log("o cadastro do Animal "+ animal.nome +", chip: " + animal.Chip +" foi completo")
+                console.log("existem "+ listaDeAnimais.length+" animais cadastrados")
+               retorno()
+               break;
+            case 3://lista de animais]
+                console.log("existem "+ listaDeAnimais.length +" animais cadastrados")
+                console.log(listaDeAnimais)
+                retorno();
+                break;
+            case 4://lista de tutores
+                console.log("Existem "+ listaDeTutores.length +" tutores registrados")
+                console.log(listaDeTutores)
+                retorno();
+                break;
+            case 5://animais a adoção
+            for (var i = 0 ; i < listaDeAnimais.length; i++)
+                if(animal[i].Estado === vivo){
+                 console.log(listaDeAnimais)
+                }
+                retorno();
+                break;
+            case 6://editar tutores
+    
+                break;
+            case 7://procurar animais
+            acharAnimalChip ()
+            retorno();
+        break;
+            case 8://procurar tutores
+            acharTutorCpf ()
+            retorno();
+        break;
+            default:
+                console.log("operação inexitente: tente novamente")
+                retorno()
+                break;
+    }
     }    
 
     if(endmenu === 2){
         console.log("Ate mais passar bem")
     }
 }
+function listarAnimais(){
+    for (var i = 0 ; i < listaDeAnimais.length; i++);
+    console.log("///////////////////////////////////")
+    console.log("Nome: " +animal.nome)
+    console.log("especie: "+animal.especie)
+    console.log("Raça: " +animal.raça)
+    console.log("Idade: "+animal.idade )
+    console.log("Estado: " +animal.estado)
+    console.log("Chip: "+animal.Chip)
+   }
+function listarTutores(){
+    for (var i = 0 ; i < listaDeTutores.length; i++);
+    console.log("///////////////////////////////////")
+    console.log("Nome: " +tutor.nome)
+    console.log("Idade: "+tutor.idade )
+    console.log("Estado: " +tutor.endereco)
+    console.log("Chip: "+tutor.cpf)
+   }
 
-animal={nome : null,especie : null,Raca : null,Genero :null,peso : 0,Estado :null,Chip : null,idade: 0} 
+animal={
+    nome : null,
+    especie : null,
+    Raca : null,
+    Genero :null,
+    peso : 0,
+    Estado :null,
+    Chip : null,
+    idade: 0} 
 
-Tutor={nome :null,sexo :null,idade:0,endereço:null,cpf :null}
+Tutor={
+    nome :null,
+    sexo :null,
+    idade:0,
+    endereco:null,
+    cpf :null
+}
 
 var listaDeTutores = []
 
-var listaDeAnimais = []
+var listaDeAnimais = [
+    { 
+        nome : "teste",
+        especie : "teste",
+        Raca : "teste",
+        Genero :"indef",
+        peso :"1",
+        Estado :"vivo",
+        Chip : "14587966",
+        idade: "1"
+    } 
+        
+]
 
 function addanimal (){
     listaDeAnimais.push(animal)
@@ -93,23 +193,29 @@ var operação = Number(prompt("insira a operação"))
            break;
         case 3://lista de animais]
             console.log("existem "+ listaDeAnimais.length +" animais cadastrados")
-            console.log(listaDeAnimais)
+            listarAnimais();
             retorno();
             break;
         case 4://lista de tutores
             console.log("Existem "+ listaDeTutores.length +" tutores registrados")
-            console.log(listaDeTutores)
+            listarTutores();
             retorno();
             break;
         case 5://animais a adoção
         for (var i = 0 ; i < listaDeAnimais.length; i++)
-            if(animal[i].Estado === vivo){
+            if(listaDeAnimais[i].Estado === vivo){
              console.log(listaDeAnimais)
             }
             retorno();
             break;
         case 6://editar tutores
-
+        var buscarAnimal = prompt("insira chip do animal a procurar:");
+        var animalFound = false
+        for (var i = 0 ; i < listaDeTutores.length; i++)
+            if(eced){
+         listaDeTutores.slice(i,1)
+         animalFound = true
+        }
             break;
         case 7://procurar animais
         acharAnimalChip ()
