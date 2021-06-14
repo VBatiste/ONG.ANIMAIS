@@ -1,8 +1,8 @@
 function acharAnimalChip (){
     var buscarAnimal = prompt("insira chip do animal a procurar:");
     var animalFound = false
-    for (var i = 0 ; i < listaDeAnimais.length; i++);
-    if ( buscarAnimal === listaDeAnimais[i].Chip) {
+    for (var i1 = 0 ; i1 < listaDeAnimais.length; i1++);
+    if ( buscarAnimal === listaDeAnimais[i1].Chip) {
         console.log("////animal encontrado////")
         console.log("nome: " + listaDeAnimais[i].nome )
         console.log("raça: " + listaDeAnimais[i].Raça )
@@ -11,14 +11,14 @@ function acharAnimalChip (){
       animalFound = true;
     }
     if ( ! buscarAnimal === animal[i].Chip -1) {
-         console.log("//animal não encontrado//")
+         console.log("//Ficha Inexistente//")
     }
 }
 function acharTutorCpf (){
     var buscarTutor = prompt("insira cpf do tutor:");
     var tutorFound = false
-    for (var i = 0 ; i < listaDeTutores.length; i++);
-    if ( buscarTutor === listaDeTutores[i].cpf) {
+    for (var i2 = 0 ; i2 < listaDeTutores.length; i2++);
+    if ( buscarTutor === listaDeTutores[i2].cpf) {
         console.log("///////tutor encontrado////////")
         console.log("nome : " + listaDeTutores[i].nome )
         console.log("idade : " +listaDeTutores[i].idade )
@@ -26,7 +26,7 @@ function acharTutorCpf (){
       tutorFound = true;
     }
     if ( ! buscarTutor === listaDeTutores[i].cpf -1) {
-         console.log("//tutor não encontrado//")
+         console.log("//Ficha Inexistente//")
     }
 }
 function retorno(){
@@ -121,7 +121,7 @@ animal={
     Genero :null,
     peso : 0,
     Estado :null,
-    Chip : null,
+    Chip : 0,
     idade: 0
 } 
 Tutor={
@@ -207,13 +207,13 @@ var operação = Number(prompt("insira a operação"))
         case 6://editar tutores
         var buscarAnimal2 = prompt("insira chip do animal a procurar:");
         var animalFound = false
-        for (var i = 0 ; i < listaDeTutores.length; i++)
-            if(buscarAnimal2===listaDeTutores[i].length){
-         listaDeTutores.slice(i,1)
+        for (var i3 = 0 ; i3 < listaDeTutores.length; i3++)
+            if(buscarAnimal2===listaDeTutores[i3].length){
+         listaDeTutores.slice(i3,1)
          console.log("animal deletado")
          animalFound = true
         }
-        if(! buscarAnimal === animal[i].Chip -1)
+        if(! buscarAnimal === animal[i3].Chip -1)
         console.log("//animal nao encontrado//")
         retorno();
             break;
@@ -224,6 +224,7 @@ var operação = Number(prompt("insira a operação"))
         case 8://procurar tutores
         acharTutorCpf ()
         retorno();
+        break
     break;
         default:
             console.log("operação inexitente: tente novamente")
