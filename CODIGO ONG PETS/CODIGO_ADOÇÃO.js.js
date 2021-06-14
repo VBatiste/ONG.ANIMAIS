@@ -1,8 +1,8 @@
-function acharAnimalChip (){
+function acharAnimalChip (i){
     var buscarAnimal = prompt("insira chip do animal a procurar:");
     var animalFound = false
-    for (var i1 = 0 ; i1 < listaDeAnimais.length; i1++);
-    if ( buscarAnimal === listaDeAnimais[i1].Chip) {
+    for (var i = 0 ; i < listaDeAnimais.length; i1++);
+    if ( buscarAnimal === listaDeAnimais[i].Chip) {
         console.log("////animal encontrado////")
         console.log("nome: " + listaDeAnimais[i].nome )
         console.log("raça: " + listaDeAnimais[i].Raça )
@@ -14,11 +14,11 @@ function acharAnimalChip (){
          console.log("//Ficha Inexistente//")
     }
 }
-function acharTutorCpf (){
+function acharTutorCpf (i){
     var buscarTutor = prompt("insira cpf do tutor:");
     var tutorFound = false
-    for (var i2 = 0 ; i2 < listaDeTutores.length; i2++);
-    if ( buscarTutor === listaDeTutores[i2].cpf) {
+    for (var i = 0 ; i < listaDeTutores.length; i++);
+    if ( buscarTutor === listaDeTutores[i].cpf) {
         console.log("///////tutor encontrado////////")
         console.log("nome : " + listaDeTutores[i].nome )
         console.log("idade : " +listaDeTutores[i].idade )
@@ -96,7 +96,7 @@ function retorno(){
         console.log("Ate mais passar bem")
     }
 }
-function listarAnimais(){
+function listarAnimais(i){
     for (var i = 0 ; i < listaDeAnimais.length; i++);
     console.log("///////////////////////////////////")
     console.log("Nome: " +animal.nome)
@@ -106,7 +106,7 @@ function listarAnimais(){
     console.log("Estado: " +animal.estado)
     console.log("Chip: "+animal.Chip)
    }
-function listarTutores(){
+function listarTutores(i){
     for (var i = 0 ; i < listaDeTutores.length; i++);
     console.log("///////////////////////////////////")
     console.log("Nome: " +tutor.nome)
